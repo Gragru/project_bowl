@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="BowlLook.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Snack Bowl</title>
+    <style>
+        img {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>The no snack bowl</h1>
+    </div>
+    <img src="NOsnack.jpg" alt="Don't have chips" width="500px" height="300px">
+
+    <ul>
+        <!--    Kommentar: För att webbsläsaren ska göra rätt, så måste vi ange ett filnamn
+                I vårt fall är det index.html. Arduinos webbserver struntar dock i filnamn.
+                FÖr att använda exemplet, som jag skickade dig behövs två variabler, 
+                varav den ena inte används (blabla=0).
+        
+        -->
+        <li><a href="index.html?text=tips&blabla=0">Tips</a></li>
+        <li><a href="index.html?text=result&blabla=0">Results</a></li>
+        <li><a href="index.html?text=more&blabla=0">More</a></li>
+    </ul>
+    <!--    För att kunna skriva ut något på en webbsida så behövs en "Placeholder"
+            I vårt fall är det en div med id=texten
+    -->
+
+    <div id="texten"></div>
+
+    <!--    Anropet till scriptet bör ligga sist på sidan, så div:en med id=texten 
+            har laddats in på sidan -->
+
+    <script src="BowlCan.js"></script>
+
+    <!-- Det här fungerar inte: <script>getQueryVariable("tips")</script> -->
+
+</body>
+
+</html>
